@@ -37,7 +37,7 @@ if (isset($_POST['signup-submit'])) {
     }
     // Checks if passwords match
     else if ($password !== $passwordRepeat) {
-        header("Location: ../signup.php?error=passwordcheckuid=".$username."&mail=".$email);
+        header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
         exit();
     }
     else {
@@ -70,14 +70,22 @@ if (isset($_POST['signup-submit'])) {
                     exit();
                 }
                 else {
+                    $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
                     // Binds params from user to sql statement
-                    mysqli_stmt_bind_param($stmt, "sss", $username, $email, $password);
+                    mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
                     // Runs query on db
                     mysqli_stmt_execute($stmt);
-                    // Stores result in $stmt
-                    mysqli_stmt_store_result($stmt);
+                    header("Location: ../signup.php?signup=success");
+                    exit();
                 }
             }
         }
     }
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+}
+// In case someone tries to access signup page without clicking signup button
+else {
+    header("Location: ../signup.php");
+    exit();
 }

@@ -1,7 +1,7 @@
 <?php
 // Checks if user got to signup page legitimately
 if (isset($_POST['signup-submit'])) {
-
+    // Establishes db connection
     require 'dbh.inc.php';
 
     // Saves fields from user signup form

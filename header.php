@@ -14,8 +14,8 @@
 
         <header>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">My Lists</a>
+                <a href="home.php">Home</a>
+                <a href="mylists.php">My Lists</a>
                 <a href="login.php">Login</a>
                 <div class="animation start-home"></div>
             </nav>    

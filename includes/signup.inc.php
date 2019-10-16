@@ -55,7 +55,7 @@ if (isset($_POST['signup-submit'])) {
             mysqli_stmt_execute($stmt);
             // Stores result in $stmt
             mysqli_stmt_store_result($stmt);
-            // $resultCheck is equal to the number of rows returned from db. Should be 0 or 1 in this case
+            // $resultCheck is equal to the number of rows returned from db
             $resultCheck = mysqli_stmt_num_rows($stmt);
             // If $resultCheck > 0 then the username already exists in db
             if ($resultCheck > 0) {

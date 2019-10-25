@@ -2,6 +2,9 @@
     require "header.php";
 ?>
 
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <main>
     <?php
@@ -12,8 +15,8 @@
         }
         else {
             echo '<form action="includes/login.inc.php" method="post">
-            <input type="text" name="mailuid" placeholder="Username">
-            <input type="password" name="pwd" placeholder="Password">
+            <input type="text" name="mailuid" placeholder="Username" class="username">
+            <input type="password" name="pwd" placeholder="Password" class="username">
             <button type="submit" name="login-submit">Login</button>
             </form>
             <a href="signup.php">Signup</a>';

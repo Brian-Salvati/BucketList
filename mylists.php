@@ -2,4 +2,9 @@
     require "header.php";
 ?>
 
-<p>Test my lists</p>
+<?php
+    if (!isset($_SESSION['userId'])) {
+        echo '<p>Please login to create lists</p>';
+    }
+?>
+

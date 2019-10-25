@@ -2,6 +2,7 @@
     require "header.php";
 ?>
 
+
     <main>
         <?php
             // Checks if user is logged in

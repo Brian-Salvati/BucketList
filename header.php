@@ -28,4 +28,6 @@
                 <div class="animation start-home"></div>
             </nav>    
         </header>
+    </body>
+</html>
 

@@ -2,9 +2,6 @@
     require "header.php";
 ?>
 
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
 
 <main>
     <?php

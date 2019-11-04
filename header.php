@@ -14,7 +14,6 @@
         <header>
             <nav>
                 <a href="home.php">Home</a>
-                <a href="mylists.php">My Lists</a>
                 <?php
                     if (isset($_SESSION['userId'])) {
                         echo '<form action="includes/logout.inc.php" method="post">

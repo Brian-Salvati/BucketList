@@ -1,5 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="dist/jquery.tabledit.js"></script>
+<script type="text/javascript" src="jquery.tabledit.js"></script>
 <script type="text/javascript" src="custom_table_edit.js"></script>
 <?php
     require "header.php";
@@ -8,12 +8,11 @@
 
 <!DOCTYPE html>
 <html>
-    <?php
-        if (!isset($_SESSION['userId'])) { ?>
-            <p>Please login to create lists</p>
+    <?php if (!isset($_SESSION['userId'])) { ?>
+        <p>Please login to create lists</p>
     <?php } else { ?>
 
-    <body>
+    <!-- <body>
         <table>
             <tr>
                 <th>Number</th>
@@ -39,8 +38,8 @@
                     echo "</table>";
                 }
             ?>
-    </body>
-    <?php } ?>
+    </body> -->
+    
 
     <!-- Test html editable table -->
     <table id="data_table" class="table table-striped">
@@ -70,6 +69,8 @@
                     <?php }} ?>
         </tbody>
     </table>
+    <?php } ?>
+
 </html>
 
 

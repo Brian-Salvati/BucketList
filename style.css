@@ -1,4 +1,4 @@
-table {
+/* table {
     border-collapse: collapse;
     width: 100%;
     color: #588c7e;
@@ -10,4 +10,7 @@ th {
     background-color: #d96459;
     color: white;
     
+} */
+html {
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -12,40 +12,11 @@
         <p>Please login to create lists</p>
     <?php } else { ?>
 
-    <!-- <body>
-        <table>
-            <tr>
-                <th>Number</th>
-                <th>Name</th>
-                <th>Notes</th>
-                <th>Completed</th>
-            </tr>
-            <?php
-                $sql = "SELECT iid, iname, notes, cmpl FROM items;";
-                $result = mysqli_query($conn, $sql);
-                $resultCheck = mysqli_num_rows($result);
-
-                if ($resultCheck > 0) {
-                    //$row becomes array of data from db
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>
-                                <td>". $row["iid"] ."</td>
-                                <td>". $row["iname"] ."</td>
-                                <td>". $row["notes"] ."</td>
-                                <td>". $row["cmpl"] ."</td>
-                            </tr>";
-                    }
-                    echo "</table>";
-                }
-            ?>
-    </body> -->
-    
-
     <!-- Test html editable table -->
     <table id="data_table" class="table table-striped">
         <thead>
             <tr>
-                <th>Number2</th>
+                <th>#</th>
                 <th>Name</th>
                 <th>Notes</th>
                 <th>Completed</th>
@@ -53,7 +24,8 @@
         </thead>
         <tbody>
             <?php 
-                $sql = "SELECT iid, iname, notes, cmpl FROM items;";
+                $sql = "SELECT iid, iname, notes, cmpl FROM users u, lists l, items i
+                        WHERE i.l_id = l.lid AND l.uid = u.u_id AND u.username = '" . $_SESSION['userUid'] . "';";
                 $result = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
                 $resultCheck = mysqli_num_rows($result);
 

@@ -13,7 +13,7 @@
             $update_field.= "cmpl='".$input['cmpl']."'";
         }
         if ($update_field && $input['iid']) {
-            $sql = "UPDATE items SET $update_field WHERE id='" . $input['iid'] . "'";
+            $sql = "UPDATE items SET $update_field WHERE iid='" . $input['iid'] . "'";
             mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
         }
     }

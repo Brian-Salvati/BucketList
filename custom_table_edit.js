@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#data_table').Tabledit({
+    $('.data_table').Tabledit({
         deleteButton: false,
         editButton: false,
         columns: {

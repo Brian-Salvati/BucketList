@@ -14,3 +14,25 @@ th {
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+.accordion { border:1px solid #ccc; }
+
+.accordion dt { padding:.5em; background-color:#dadada; cursor:pointer; }
+
+.accordion dt:hover { color:#666; }
+
+.accordion .on { background-color:#eaeaea; cursor:default; }
+
+.accordion dt,
+.accordion .on:hover { color:#111; }
+
+.accordion dd { padding-left:.5em; padding-right:.5em; }
+
+/* NOTE:
+  Do not apply top/bottom padding or margin to the accordion content,
+  as its affects to the box model will cause the animation to be choppy.
+  Instead, apply vertical spacing to the content elements.
+  */
+
+.accordion dd p { padding-top:.5em; padding-bottom:.5em; }
+
+body{ padding:2em; } /* used only to pretty up the display panel */

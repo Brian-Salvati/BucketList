@@ -1,7 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.tabledit.js"></script>
-<script type="text/javascript" src="custom_table_edit.js"></script>
-<script type="text/javascript" src="jquery.tableanimation.js"></script>
 <?php
     require "header.php";
     include_once 'includes/dbh.inc.php';

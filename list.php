@@ -4,7 +4,7 @@
 <?php
     require "header.php";
     $_SESSION['list']=$_GET['list'];
-    include_once 'includes/dbqh.inc.php';
+    include_once 'includes/listquery.inc.php';
 ?>
 
 <!DOCTYPE html>

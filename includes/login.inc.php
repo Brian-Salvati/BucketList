@@ -1,4 +1,5 @@
 <?php
+
 // Checks if user got to login page legitimately
 if (isset($_POST['login-submit'])) {
     // Establishes db connection
@@ -54,3 +55,4 @@ else {
     header("Location: ../index.php");
     exit();
 }
+?>

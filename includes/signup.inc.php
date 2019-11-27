@@ -1,4 +1,5 @@
 <?php
+
 // Checks if user got to signup page legitimately
 if (isset($_POST['signup-submit'])) {
     // Establishes db connection
@@ -42,7 +43,7 @@ if (isset($_POST['signup-submit'])) {
     }
     else {
         $sql = "SELECT username FROM users WHERE username=?";
-        // Prepared statement 
+        // Prepared statement for security
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../signup.php?error=sqlerror");
@@ -89,3 +90,4 @@ else {
     header("Location: ../signup.php");
     exit();
 }
+?>

@@ -38,5 +38,6 @@
                 <?php }} ?>
             </tbody>
         </table>
+        <button type="button" id="button_add_row">Add Row</button>
     </body>
 </html>

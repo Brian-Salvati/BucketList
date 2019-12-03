@@ -5,6 +5,7 @@ $(document).ready(function() {
         saveButton: false,
         autoFocus: false,
         editButton: true,
+        addButton: true,
         buttons: {
             edit: {
                 class: 'btn btn-sm btn-primary',
@@ -19,6 +20,11 @@ $(document).ready(function() {
             confirm: {
                 class: 'btn btn-sm btn-default',
                 html: 'Are you sure?'
+            },
+            add: {
+                class: 'btn btn-xs btn-default',
+                html: '<span class="fa fa-plus"></span> Add',
+                action: 'add'
             }
         },
         columns: {
@@ -49,5 +55,18 @@ $(document).ready(function() {
             console.log(serialize);
         },
         hideIdentifier: false,
+    });
+
+    $("#button_add_row").click(function() { 
+        var tableditTableName = '#data_table';  // Identifier of table
+        var newID = parseInt($(tableditTableName + " tr:last").attr("id")) + 1; 
+        var clone = $("table tr:last").clone(); 
+        $(".tabledit-span", clone).text(""); 
+        $(".tabledit-input", clone).val(""); 
+        clone.appendTo("table"); 
+        $(tableditTableName + " tbody tr:last").attr("id", newID); 
+        $(tableditTableName + " tbody tr:last td .tabledit-span.tabledit-identifier").text(newID); 
+        $(tableditTableName + " tbody tr:last td .tabledit-input.tabledit-identifier").val(newID); 
+        $(tableditTableName + " tbody tr:last td:last .tabledit-edit-button").trigger("click");
     });
 });

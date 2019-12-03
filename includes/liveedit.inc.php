@@ -2,7 +2,7 @@
 
     include_once("dbh.inc.php");
     $input = filter_input_array(INPUT_POST);
-    if ($input['action'] == 'edit') {
+    if ($input['action'] === 'edit') {
         $update_field='';
         if (isset($input['iname'])) {
             $update_field.= "iname='".$input['iname']."'";

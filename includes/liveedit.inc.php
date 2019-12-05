@@ -11,7 +11,7 @@
         $sql = "UPDATE items SET deleted = '1' WHERE iid='" . $input['iid'] . "'";
         mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
     } else if ($input['action'] === 'add') {
-        $sql = "INSERT INTO items (l_id, iname, notes, cmpl) VALUES ((SELECT lid FROM lists WHERE lname =  = '" . $_SESSION['list'] . "' ), '".$input['iname'] . "', '".$input['notes'] . "', '".$input['cmpl'] . "')";
+        $sql = "INSERT INTO items (l_id, iname, notes, cmpl) VALUES ((SELECT lid FROM lists WHERE lname = '" . $_SESSION['list'] . "' ), '".$input['iname'] . "', '".$input['notes'] . "', '".$input['cmpl'] . "')";
         mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
     }
 

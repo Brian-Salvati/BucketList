@@ -81,6 +81,5 @@
                 return false;
             }
         </script>
-        <!-- <button type="button" id="button_add_row">Add Row</button> -->
     </body>
 </html>
